@@ -13,6 +13,7 @@ class CompanyStatisticController extends Controller
     public function index()
     {
         //
+        return('halaman index tampilkan data statistik pada cms');
     }
 
     /**
