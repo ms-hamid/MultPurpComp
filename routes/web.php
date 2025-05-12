@@ -55,12 +55,12 @@ Route::middleware('auth')->group(function () {
             Route::resource('teams', OurTeamController::class);
         });
 
-        route::middleware('can:manage appointments')->group(function () {
+        Route::middleware('can:manage appointments')->group(function () {
             Route::resource('appointments', AppointmentController::class);
         });
 
-        route::middleware('can:manage hero sections')->group(function () {
-            Route::resource('hero-sections', HeroSectionController::class);
+        Route::middleware('can:manage hero sections')->group(function () {
+            Route::resource('hero_sections', HeroSectionController::class);
         });
     });
 
