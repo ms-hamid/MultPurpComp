@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('company_abouts', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name');
+            $table->string('thumbnail');
+            $table->string('type');
+            $table->softDeletes();
+            $table->timestamps(); 
         });
     }
 

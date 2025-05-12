@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('company_statistics', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('goal');
+            $table->string('icon');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
