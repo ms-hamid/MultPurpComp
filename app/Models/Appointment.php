@@ -20,4 +20,12 @@ class Appointment extends Model
         'product_id',
     ];
 
+    protected $casts = [
+        'meeting_at' => 'date', // format method
+    ];
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class, 'product_id');
+    }
 }
