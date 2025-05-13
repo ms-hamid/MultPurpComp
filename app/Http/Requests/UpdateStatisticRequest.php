@@ -11,7 +11,7 @@ class UpdateStatisticRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,6 +23,9 @@ class UpdateStatisticRequest extends FormRequest
     {
         return [
             //
+            'name' => ['required','string','max:255'],
+            'goal' => ['required','string','max:255'],
+            'icon' => ['sometimes','image','mime:png,jpg,jpeg'],
         ];
     }
 }
