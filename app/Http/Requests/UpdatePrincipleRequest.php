@@ -11,7 +11,7 @@ class UpdatePrincipleRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,6 +23,10 @@ class UpdatePrincipleRequest extends FormRequest
     {
         return [
             //
+            'name' => ['required', 'string', 'max:255'],
+            'subtitle' => ['required', 'string', 'max:255'],
+            'thumbnail' => ['sometimes', 'image', 'mime:png,jpg,jpeg'],
+            'icon' => ['sometimes', 'image', 'mime:png,jpg,jpeg'],
         ];
     }
 }

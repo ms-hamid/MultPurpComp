@@ -11,7 +11,7 @@ class UpdateClientRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,6 +23,10 @@ class UpdateClientRequest extends FormRequest
     {
         return [
             //
+            'name' => ['required', 'string', 'max:255'],
+            'occupation' => ['required', 'string', 'max:255'],
+            'avatar' => ['sometimes', 'image', 'mime:png,jpg,jpeg'],
+            'logo' => ['sometimes', 'image', 'mime:png,jpg,jpeg'],
         ];
     }
 }

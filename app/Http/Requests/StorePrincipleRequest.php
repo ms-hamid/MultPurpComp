@@ -11,7 +11,7 @@ class StorePrincipleRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,6 +23,10 @@ class StorePrincipleRequest extends FormRequest
     {
         return [
             //
+            'name' => ['required', 'string', 'max:255'],
+            'subtitle' => ['required', 'string', 'max:255'],
+            'thumbnail' => ['required', 'image', 'mime:png,jpg,jpeg'],
+            'icon' => ['required', 'image', 'mime:png,jpg,jpeg'],
         ];
     }
 }
