@@ -23,6 +23,7 @@ class CompanyAboutController extends Controller
     public function create()
     {
         //
+        return view('admin.about.create');
     }
 
     /**
