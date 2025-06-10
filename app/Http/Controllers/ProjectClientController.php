@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreClientRequest;
 use App\Models\ProjectClient;
+use Illuminate\Contracts\Cache\Store;
 use Illuminate\Http\Request;
 
 class ProjectClientController extends Controller
@@ -29,7 +31,7 @@ class ProjectClientController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreClientRequest $request)
     {
         //
     }
