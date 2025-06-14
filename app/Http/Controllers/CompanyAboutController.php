@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreAboutRequest;
 use App\Models\CompanyAbout;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CompanyAboutController extends Controller
 {
@@ -32,7 +33,27 @@ class CompanyAboutController extends Controller
      */
     public function store(StoreAboutRequest $request)
     {
-        //
+        // Insert to the database in a specific table (testimonials)
+        DB::transaction(function () use ($request) {
+            $validated = $request->validated();
+
+            if ($request->hasFile('thumbnail')) {
+                $thumbnailPath = $request->file('thumbnail')->store('thumbnails', 'public');
+                $validated['thumbnail'] = $thumbnailPath;
+            }
+
+            $newAbout = CompanyAbout::create($validated);
+            
+            if (!empty($validated['keypoints'])) {
+                foreach ($validated['keypoints'] as $keypoint) {
+                    $newAbout->keypoints()->create([
+                        'keypoint' => $keypoint
+                    ]);
+                }
+            }
+        });
+
+        return redirect()->route('admin.abouts.index')->with('success', 'About section created successfully.');
     }
 
     /**
