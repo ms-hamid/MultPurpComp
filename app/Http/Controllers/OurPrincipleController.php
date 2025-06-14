@@ -80,8 +80,12 @@ class OurPrincipleController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(OurPrinciple $ourPrinciple)
+    public function destroy(OurPrinciple $principle)
     {
         //
+        DB::transaction(function () use ($principle) {
+            $principle->delete();
+        });
+        return redirect()->route('admin.principles.index')->with('success', 'Principle deleted successfully.');
     }
 }

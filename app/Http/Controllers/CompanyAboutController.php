@@ -83,8 +83,12 @@ class CompanyAboutController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(CompanyAbout $companyAbout)
+    public function destroy(CompanyAbout $about)
     {
         //
+        DB::transaction(function () use ($about) {
+            $about->delete();
+        });
+        return redirect()->route('admin.abouts.index')->with('success', 'About section deleted successfully.');
     }
 }
