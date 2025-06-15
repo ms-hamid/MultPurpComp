@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreClientRequest;
+use App\Http\Requests\UpdateClientRequest;
 use App\Models\ProjectClient;
 use Illuminate\Contracts\Cache\Store;
 use Illuminate\Http\Request;
@@ -74,9 +75,26 @@ class ProjectClientController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, ProjectClient $client)
+    public function update(UpdateClientRequest $request, ProjectClient $client)
     {
-        //
+        // Insert to the database in a specific table (project_clients)
+        DB::transaction(function () use ($request, $client) {
+            $validated = $request->validated();
+
+            if ($request->hasFile('avatar')) {
+                $avatarPath = $request->file('avatar')->store('avatars', 'public');
+                $validated['avatar'] = $avatarPath;
+            }
+
+            if ($request->hasFile('logo')) {
+                $logoPath = $request->file('logo')->store('logos', 'public');
+                $validated['logo'] = $logoPath;
+            }
+
+            $client->update($validated);
+        });
+
+        return redirect()->route('admin.clients.index')->with('success', 'Client updated successfully.');
     }
 
     /**
