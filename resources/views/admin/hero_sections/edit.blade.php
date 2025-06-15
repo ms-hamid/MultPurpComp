@@ -31,7 +31,7 @@
                     <div class="mt-4">
                         <x-input-label for="banner" :value="__('banner')" />
                         <img src="{{ Storage::url($heroSection->banner) }}" alt="" class="rounded-2xl object-cover w-[90px] h-[90px]">
-                        <x-text-input id="banner" class="block mt-1 w-full" type="file" name="banner" required autofocus autocomplete="banner" />
+                        <x-text-input id="banner" class="block mt-1 w-full" type="file" name="banner"  autofocus autocomplete="banner" />
                         <x-input-error :messages="$errors->get('banner')" class="mt-2" />
                     </div>
 

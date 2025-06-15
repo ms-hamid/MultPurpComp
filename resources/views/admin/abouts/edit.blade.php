@@ -39,14 +39,16 @@
 
                     <h3 class="text-indigo-950 text-lg font-bold mt-4">Keypoints</h3>
 
-                    <div class="mt-4">
-                        
-                        <div class="flex flex-col gap-y-5">
-                            <x-input-label for="keypoints" :value="__('keypoints')" /> 
-                                <input type="text" class="py-3 rounded-lg border-slate-300 border" value="{{ $about->keypoints[0] ?? '' }}" name="keypoints[]">
-                             
-                        </div>
-                        <x-input-error :messages="$errors->get('keypoint')" class="mt-2" />
+                    <div class="mt-2">
+                        @foreach ($about->keypoints as $keypoint)
+                            <div class="flex flex-col gap-y-1 mb-4">
+                                <x-input-label for="keypoints" :value="__('keypoints')" /> 
+                                <input type="text" class="py-3 rounded-lg border-slate-300 border" 
+                                    value="{{ $keypoint['keypoint'] }}" 
+                                    name="keypoints[]">
+                            </div>
+                        @endforeach
+                        <x-input-error :messages="$errors->get('keypoints')" class="mt-2" />
                     </div>
 
                     <div class="flex items-center justify-end mt-4">
