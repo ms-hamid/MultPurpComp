@@ -30,8 +30,8 @@
                         <x-input-label for="type" :value="__('type')" />
                         
                         <select name="type" id="type" class="py-3 rounded-lg pl-3 w-full border border-slate-300">
-                            <option value="Visions">Visions</option>
-                            <option value="Missions">Missions</option>
+                            <option value="Visions" {{ $about->type == 'Visions' ? 'selected' : '' }}>Visions</option>
+                            <option value="Missions" {{ $about->type == 'Missions' ? 'selected' : '' }}>Missions</option>
                         </select>
 
                         <x-input-error :messages="$errors->get('type')" class="mt-2" />
