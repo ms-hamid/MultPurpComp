@@ -25,7 +25,7 @@ class UpdateProductRequest extends FormRequest
             //
             'name' => ['required', 'string', 'max:255'],
             'tagline' => ['required', 'string', 'max:255'],
-            'thumbnail' => ['sometimes', 'image', 'mime:png,jpg,jpeg'],
+            'thumbnail' => ['sometimes', 'image', 'mimes:png,jpg,jpeg'],
             'about' => ['required', 'string', 'max:65535'],
         ];
     }

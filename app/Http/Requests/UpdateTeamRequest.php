@@ -26,7 +26,7 @@ class UpdateTeamRequest extends FormRequest
             'name' => ['required', 'string', 'max:255'],
             'occupation' => ['required', 'string', 'max:255'],
             'location' => ['required', 'string', 'max:255'],
-            'avatar' => ['sometimes', 'image', 'mime:png,jpg,jpeg'],
+            'avatar' => ['sometimes', 'image', 'mimes:png,jpg,jpeg'],
         ];
     }
 }
