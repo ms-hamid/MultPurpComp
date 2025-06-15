@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('company_keypoints', function (Blueprint $table) {
             $table->id();
             $table->string('keypoint');
-            $table->foreignId('company_about_id')->constrained();
+            $table->foreignId('company_about_id')->constrained()->onDelete('cascade');
             $table->softDeletes();
             $table->timestamps();
         });
