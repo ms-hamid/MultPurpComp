@@ -62,6 +62,7 @@ class HeroSectionController extends Controller
     public function edit(HeroSection $heroSection)
     {
         //
+        return view('admin.hero_sections.edit', compact('heroSection'));
     }
 
     /**
