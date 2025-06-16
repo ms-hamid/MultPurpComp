@@ -1,24 +1,11 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="{{asset('css/output.css')}}" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <!-- CSS for carousel/flickity-->
-  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/flickity-fade@2/flickity-fade.css">
-  
-  <!-- CSS for modal/flowbite -->
-  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" /> -->
-</head>
-<body class="font-poppins text-cp-black">
+@extends('front.layouts.app')
+@section('content')
   <div id="header" class="bg-[#F6F7FA] relative overflow-hidden">
     <div class="container max-w-[1130px] mx-auto relative pt-10 z-10">
         <nav class="flex flex-wrap items-center justify-between bg-white p-[20px_30px] rounded-[20px] gap-y-3">
             <div class="flex items-center gap-3">
                 <div class="flex shrink-0 h-[43px] overflow-hidden">
-                    <img src="assets/logo/logo.svg" class="object-contain w-full h-full" alt="logo">
+                    <img src="{{asset('assets/logo/logo.svg')}}" class="object-contain w-full h-full" alt="logo">
                 </div>
                 <div class="flex flex-col">
                   <p id="CompanyName" class="font-extrabold text-xl leading-[30px]">ShaynaComp</p>
@@ -47,7 +34,7 @@
         <div id="Hero" class="flex flex-col gap-[30px] mt-20 pb-20">
           <div class="flex items-center bg-white p-[8px_16px] gap-[10px] rounded-full w-fit">
             <div class="w-5 h-5 flex shrink-0 overflow-hidden">
-              <img src="assets/icons/crown.svg" class="object-contain" alt="icon">
+              <img src="{{asset('assets/icons/crown.svg')}}" class="object-contain" alt="icon">
             </div>
             <p class="font-semibold text-sm">We reached 10,000 huge buildings in 2024</p>
           </div>
@@ -59,7 +46,7 @@
             <a href="" class="bg-cp-dark-blue p-5 w-fit rounded-xl hover:shadow-[0_12px_30px_0_#312ECB66] transition-all duration-300 font-bold text-white">Explore Now</a>
             <button class="bg-cp-black p-5 w-fit rounded-xl font-bold text-white flex items-center gap-[10px]" onclick="{modal.show()}">
               <div class="w-6 h-6 flex shrink-0 overflow-hidden">
-                <img src="assets/icons/play-circle.svg" class="w-full h-full object-contain" alt="icon">
+                <img src="{{asset('assets/icons/play-circle.svg')}}" class="w-full h-full object-contain" alt="icon">
               </div>
               <span>Watch Video</span>
             </button>
@@ -67,7 +54,7 @@
         </div>
     </div>
     <div class="absolute w-[43%] h-full top-0 right-0 overflow-hidden z-0">
-        <img src="assets/backgrounds/banner.jpg" class="object-cover w-full h-full" alt="banner">
+        <img src="{{asset('assets/backgrounds/banner.jpg')}}" class="object-cover w-full h-full" alt="banner">
     </div>
   </div>
   <div id="Clients" class="container max-w-[1130px] mx-auto flex flex-col justify-center text-center gap-5 mt-20">
@@ -75,47 +62,47 @@
     <div class="logo-container flex flex-wrap gap-5 justify-center">
       <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
         <div class="overflow-hidden h-9">
-          <img src="assets/logo/logo-54.svg" class="object-contain w-full h-full" alt="logo">
+          <img src="{{asset('assets/logo/logo-54.svg')}}" class="object-contain w-full h-full" alt="logo">
         </div>
       </div>
       <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
         <div class="overflow-hidden h-9">
-          <img src="assets/logo/logo-52.svg" class="object-contain w-full h-full" alt="logo">
+          <img src="{{asset('assets/logo/logo-52.svg')}}" class="object-contain w-full h-full" alt="logo">
         </div>
       </div>
       <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
         <div class="overflow-hidden h-9">
-          <img src="assets/logo/logo-55.svg" class="object-contain w-full h-full" alt="logo">
+          <img src="{{asset('assets/logo/logo-55.svg')}}" class="object-contain w-full h-full" alt="logo">
         </div>
       </div>
       <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
         <div class="overflow-hidden h-9">
-          <img src="assets/logo/logo-44.svg" class="object-contain w-full h-full" alt="logo">
+          <img src="{{asset('assets/logo/logo-44.svg')}}" class="object-contain w-full h-full" alt="logo">
         </div>
       </div>
       <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
         <div class="overflow-hidden h-9">
-          <img src="assets/logo/logo-51.svg" class="object-contain w-full h-full" alt="logo">
+          <img src="{{asset('assets/logo/logo-51.svg')}}" class="object-contain w-full h-full" alt="logo">
         </div>
       </div>
       <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
         <div class="overflow-hidden h-9">
-          <img src="assets/logo/logo-55.svg" class="object-contain w-full h-full" alt="logo">
+          <img src="{{asset('assets/logo/logo-55.svg')}}" class="object-contain w-full h-full" alt="logo">
         </div>
       </div>
       <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
         <div class="overflow-hidden h-9">
-          <img src="assets/logo/logo-52.svg" class="object-contain w-full h-full" alt="logo">
+          <img src="{{asset('assets/logo/logo-52.svg')}}" class="object-contain w-full h-full" alt="logo">
         </div>
       </div>
       <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
         <div class="overflow-hidden h-9">
-          <img src="assets/logo/logo-54.svg" class="object-contain w-full h-full" alt="logo">
+          <img src="{{asset('assets/logo/logo-54.svg')}}" class="object-contain w-full h-full" alt="logo">
         </div>
       </div>
       <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
         <div class="overflow-hidden h-9">
-          <img src="assets/logo/logo-51.svg" class="object-contain w-full h-full" alt="logo">
+          <img src="{{asset('assets/logo/logo-51.svg')}}" class="object-contain w-full h-full" alt="logo">
         </div>
       </div>
     </div>
@@ -131,11 +118,11 @@
     <div class="flex flex-wrap items-center gap-[30px] justify-center">
       <div class="card w-[356.67px] flex flex-col bg-white border border-[#E8EAF2] rounded-[20px] gap-[30px] overflow-hidden hover:border-cp-dark-blue transition-all duration-300">
         <div class="thumbnail h-[200px] flex shrink-0 overflow-hidden">
-          <img src="assets/thumbnails/cover1.jpg" class="object-cover object-center w-full h-full" alt="thumbnails">
+          <img src="{{asset('assets/thumbnails/cover1.jpg')}}" class="object-cover object-center w-full h-full" alt="thumbnails">
         </div>
         <div class="flex flex-col p-[0_30px_30px_30px] gap-5">
           <div class="w-[55px] h-[55px] flex shrink-0 overflow-hidden">
-            <img src="assets/icons/note-favorite.svg" class="w-full h-full object-contain" alt="icon">
+            <img src="{{asset('assets/icons/note-favorite.svg')}}" class="w-full h-full object-contain" alt="icon">
           </div>
           <div class="flex flex-col gap-1">
             <p class="title font-bold text-xl leading-[30px]">Prioritize Trust</p>
@@ -146,11 +133,11 @@
       </div>
       <div class="card w-[356.67px] flex flex-col bg-white border border-[#E8EAF2] rounded-[20px] gap-[30px] overflow-hidden hover:border-cp-dark-blue transition-all duration-300">
         <div class="thumbnail h-[200px] flex shrink-0 overflow-hidden">
-          <img src="assets/thumbnails/cover2.jpg" class="object-cover object-center w-full h-full" alt="thumbnails">
+          <img src="{{asset('assets/thumbnails/cover2.jpg')}}" class="object-cover object-center w-full h-full" alt="thumbnails">
         </div>
         <div class="flex flex-col p-[0_30px_30px_30px] gap-5">
           <div class="w-[55px] h-[55px] flex shrink-0 overflow-hidden">
-            <img src="assets/icons/user-octagon.svg" class="w-full h-full object-contain" alt="icon">
+            <img src="{{asset('assets/icons/user-octagon.svg')}}" class="w-full h-full object-contain" alt="icon">
           </div>
           <div class="flex flex-col gap-1">
             <p class="title font-bold text-xl leading-[30px]">Professional People</p>
@@ -161,11 +148,11 @@
       </div>
       <div class="card w-[356.67px] flex flex-col bg-white border border-[#E8EAF2] rounded-[20px] gap-[30px] overflow-hidden hover:border-cp-dark-blue transition-all duration-300">
         <div class="thumbnail h-[200px] flex shrink-0 overflow-hidden">
-          <img src="assets/thumbnails/cover3.jpg" class="object-cover object-center w-full h-full" alt="thumbnails">
+          <img src="{{asset('assets/thumbnails/cover3.jpg')}}" class="object-cover object-center w-full h-full" alt="thumbnails">
         </div>
         <div class="flex flex-col p-[0_30px_30px_30px] gap-5">
           <div class="w-[55px] h-[55px] flex shrink-0 overflow-hidden">
-            <img src="assets/icons/building-4.svg" class="w-full h-full object-contain" alt="icon">
+            <img src="{{asset('assets/icons/building-4.svg')}}" class="w-full h-full object-contain" alt="icon">
           </div>
           <div class="flex flex-col gap-1">
             <p class="title font-bold text-xl leading-[30px]">Eco Friendly Concept</p>
@@ -181,28 +168,28 @@
       <div class="flex flex-wrap items-center justify-between p-[10px]">
         <div class="card w-[200px] flex flex-col items-center gap-[10px] text-center">
           <div class="w-[55px] h-[55px] flex shrink-0 overflow-hidden">
-            <img src="assets/icons/cup.svg" class="object-contain w-full h-full" alt="icon">
+            <img src="{{asset('assets/icons/cup.svg')}}" class="object-contain w-full h-full" alt="icon">
           </div>
           <p class="text-cp-pale-orange font-bold text-4xl leading-[54px]">189.409</p>
           <p class="text-cp-light-grey">Award-winning Buildings</p>
         </div>
         <div class="card w-[200px] flex flex-col items-center gap-[10px] text-center">
           <div class="w-[55px] h-[55px] flex shrink-0 overflow-hidden">
-            <img src="assets/icons/buildings.svg" class="object-contain w-full h-full" alt="icon">
+            <img src="{{asset('assets/icons/buildings.svg')}}" class="object-contain w-full h-full" alt="icon">
           </div>
           <p class="text-cp-pale-orange font-bold text-4xl leading-[54px]">198</p>
           <p class="text-cp-light-grey">HQ Worldwide</p>
         </div>
         <div class="card w-[200px] flex flex-col items-center gap-[10px] text-center">
           <div class="w-[55px] h-[55px] flex shrink-0 overflow-hidden">
-            <img src="assets/icons/status-up.svg" class="object-contain w-full h-full" alt="icon">
+            <img src="{{asset('assets/icons/status-up.svg')}}" class="object-contain w-full h-full" alt="icon">
           </div>
           <p class="text-cp-pale-orange font-bold text-4xl leading-[54px]">$512bn</p>
           <p class="text-cp-light-grey">Success Investments</p>
         </div>
         <div class="card w-[200px] flex flex-col items-center gap-[10px] text-center">
           <div class="w-[55px] h-[55px] flex shrink-0 overflow-hidden">
-            <img src="assets/icons/star.svg" class="object-contain w-full h-full" alt="icon">
+            <img src="{{asset('assets/icons/star.svg')}}" class="object-contain w-full h-full" alt="icon">
           </div>
           <p class="text-cp-pale-orange font-bold text-4xl leading-[54px]">4.9/5</p>
           <p class="text-cp-light-grey">Honest Reviews</p>
@@ -213,7 +200,7 @@
   <div id="Products" class="container max-w-[1130px] mx-auto flex flex-col gap-20 mt-20">
     <div class="product flex flex-wrap justify-center items-center gap-[60px] even:flex-row-reverse">
       <div class="w-[470px] h-[550px] flex shrink-0 overflow-hidden">
-        <img src="assets/thumbnails/product cover one.png" class="w-full h-full object-contain" alt="thumbnail">
+        <img src="{{asset('assets/thumbnails/product cover one.png')}}" class="w-full h-full object-contain" alt="thumbnail">
       </div>
       <div class="flex flex-col gap-[30px] py-[50px] h-fit max-w-[500px]">
         <p class="badge w-fit bg-cp-pale-blue text-cp-light-blue p-[8px_16px] rounded-full uppercase font-bold text-sm">WORLD TRADE CENTER</p>
@@ -226,7 +213,7 @@
     </div>
     <div class="product flex flex-wrap justify-center items-center gap-[60px] even:flex-row-reverse">
       <div class="w-[470px] h-[550px] flex shrink-0 overflow-hidden">
-        <img src="assets/thumbnails/product cover two.png" class="w-full h-full object-contain" alt="thumbnail">
+        <img src="{{asset('assets/thumbnails/product cover two.png')}}" class="w-full h-full object-contain" alt="thumbnail">
       </div>
       <div class="flex flex-col gap-[30px] py-[50px] h-fit max-w-[500px]">
         <p class="badge w-fit bg-cp-pale-blue text-cp-light-blue p-[8px_16px] rounded-full uppercase font-bold text-sm">FAMILY HARMONY</p>
@@ -239,7 +226,7 @@
     </div>
     <div class="product flex flex-wrap justify-center items-center gap-[60px] even:flex-row-reverse">
       <div class="w-[470px] h-[550px] flex shrink-0 overflow-hidden">
-        <img src="assets/thumbnails/product cover three.png" class="w-full h-full object-contain" alt="thumbnail">
+        <img src="{{asset('assets/thumbnails/product cover three.png')}}" class="w-full h-full object-contain" alt="thumbnail">
       </div>
       <div class="flex flex-col gap-[30px] py-[50px] h-fit max-w-[500px]">
         <p class="badge w-fit bg-cp-pale-blue text-cp-light-blue p-[8px_16px] rounded-full uppercase font-bold text-sm">ECO-FRIENDLY SPACE</p>
@@ -261,7 +248,7 @@
         <div class="card bg-white flex flex-col h-full justify-center items-center p-[30px] px-[29px] gap-[30px] rounded-[20px] border border-white hover:shadow-[0_10px_30px_0_#D1D4DF80] hover:border-cp-dark-blue transition-all duration-300">
           <div class="w-[100px] h-[100px] flex shrink-0 items-center justify-center rounded-full bg-[linear-gradient(150.55deg,_#007AFF_8.72%,_#312ECB_87.11%)]">
             <div class="w-[90px] h-[90px] rounded-full overflow-hidden">
-              <img src="assets/photos/photo1.png" class="object-cover w-full h-full object-center" alt="photo">
+              <img src="{{asset('assets/photos/photo1.png')}}" class="object-cover w-full h-full object-center" alt="photo">
             </div>
           </div>
           <div class="flex flex-col gap-1 text-center">
@@ -270,7 +257,7 @@
           </div>
           <div class="flex items-center justify-center gap-[10px]">
             <div class="w-6 h-6 flex shrink-0">
-              <img src="assets/icons/global.svg" alt="icon">
+              <img src="{{asset('assets/icons/global.svg')}}" alt="icon">
             </div>
             <p class="text-cp-dark-blue font-semibold">Shanghai, China</p>
           </div>
@@ -278,7 +265,7 @@
         <div class="card bg-white flex flex-col h-full justify-center items-center p-[30px] px-[29px] gap-[30px] rounded-[20px] border border-white hover:shadow-[0_10px_30px_0_#D1D4DF80] hover:border-cp-dark-blue transition-all duration-300">
           <div class="w-[100px] h-[100px] flex shrink-0 items-center justify-center rounded-full bg-[linear-gradient(150.55deg,_#007AFF_8.72%,_#312ECB_87.11%)]">
             <div class="w-[90px] h-[90px] rounded-full overflow-hidden">
-              <img src="assets/photos/photo2.png" class="object-cover w-full h-full object-center" alt="photo">
+              <img src="{{asset('assets/photos/photo2.png')}}" class="object-cover w-full h-full object-center" alt="photo">
             </div>
           </div>
           <div class="flex flex-col gap-1 text-center">
@@ -287,7 +274,7 @@
           </div>
           <div class="flex items-center justify-center gap-[10px]">
             <div class="w-6 h-6 flex shrink-0">
-              <img src="assets/icons/global.svg" alt="icon">
+              <img src="{{asset('assets/icons/global.svg')}}" alt="icon">
             </div>
             <p class="text-cp-dark-blue font-semibold">Bali, Indonesia</p>
           </div>
@@ -295,7 +282,7 @@
         <div class="card bg-white flex flex-col h-full justify-center items-center p-[30px] px-[29px] gap-[30px] rounded-[20px] border border-white hover:shadow-[0_10px_30px_0_#D1D4DF80] hover:border-cp-dark-blue transition-all duration-300">
           <div class="w-[100px] h-[100px] flex shrink-0 items-center justify-center rounded-full bg-[linear-gradient(150.55deg,_#007AFF_8.72%,_#312ECB_87.11%)]">
             <div class="w-[90px] h-[90px] rounded-full overflow-hidden">
-              <img src="assets/photos/photo3.png" class="object-cover w-full h-full object-center" alt="photo">
+              <img src="{{asset('assets/photos/photo3.png')}}" class="object-cover w-full h-full object-center" alt="photo">
             </div>
           </div>
           <div class="flex flex-col gap-1 text-center">
@@ -304,7 +291,7 @@
           </div>
           <div class="flex items-center justify-center gap-[10px]">
             <div class="w-6 h-6 flex shrink-0">
-              <img src="assets/icons/global.svg" alt="icon">
+              <img src="{{asset('assets/icons/global.svg')}}" alt="icon">
             </div>
             <p class="text-cp-dark-blue font-semibold">Orchard, Singapore</p>
           </div>
@@ -312,7 +299,7 @@
         <div class="card bg-white flex flex-col h-full justify-center items-center p-[30px] px-[29px] gap-[30px] rounded-[20px] border border-white hover:shadow-[0_10px_30px_0_#D1D4DF80] hover:border-cp-dark-blue transition-all duration-300">
           <div class="w-[100px] h-[100px] flex shrink-0 items-center justify-center rounded-full bg-[linear-gradient(150.55deg,_#007AFF_8.72%,_#312ECB_87.11%)]">
             <div class="w-[90px] h-[90px] rounded-full overflow-hidden">
-              <img src="assets/photos/photo4.png" class="object-cover w-full h-full object-center" alt="photo">
+              <img src="{{asset('assets/photos/photo4.png')}}" class="object-cover w-full h-full object-center" alt="photo">
             </div>
           </div>
           <div class="flex flex-col gap-1 text-center">
@@ -321,7 +308,7 @@
           </div>
           <div class="flex items-center justify-center gap-[10px]">
             <div class="w-6 h-6 flex shrink-0">
-              <img src="assets/icons/global.svg" alt="icon">
+              <img src="{{asset('assets/icons/global.svg')}}" alt="icon">
             </div>
             <p class="text-cp-dark-blue font-semibold">Ho Chi Min, Vietnam</p>
           </div>
@@ -329,7 +316,7 @@
         <div class="card bg-white flex flex-col h-full justify-center items-center p-[30px] px-[29px] gap-[30px] rounded-[20px] border border-white hover:shadow-[0_10px_30px_0_#D1D4DF80] hover:border-cp-dark-blue transition-all duration-300">
           <div class="w-[100px] h-[100px] flex shrink-0 items-center justify-center rounded-full bg-[linear-gradient(150.55deg,_#007AFF_8.72%,_#312ECB_87.11%)]">
             <div class="w-[90px] h-[90px] rounded-full overflow-hidden">
-              <img src="assets/photos/photo5.png" class="object-cover w-full h-full object-center" alt="photo">
+              <img src="{{asset('assets/photos/photo5.png')}}" class="object-cover w-full h-full object-center" alt="photo">
             </div>
           </div>
           <div class="flex flex-col gap-1 text-center">
@@ -338,7 +325,7 @@
           </div>
           <div class="flex items-center justify-center gap-[10px]">
             <div class="w-6 h-6 flex shrink-0">
-              <img src="assets/icons/global.svg" alt="icon">
+              <img src="{{asset('assets/icons/global.svg')}}" alt="icon">
             </div>
             <p class="text-cp-dark-blue font-semibold">Ho Chi Min, Vietnam</p>
           </div>
@@ -346,7 +333,7 @@
         <div class="card bg-white flex flex-col h-full justify-center items-center p-[30px] px-[29px] gap-[30px] rounded-[20px] border border-white hover:shadow-[0_10px_30px_0_#D1D4DF80] hover:border-cp-dark-blue transition-all duration-300">
           <div class="w-[100px] h-[100px] flex shrink-0 items-center justify-center rounded-full bg-[linear-gradient(150.55deg,_#007AFF_8.72%,_#312ECB_87.11%)]">
             <div class="w-[90px] h-[90px] rounded-full overflow-hidden">
-              <img src="assets/photos/photo6.png" class="object-cover w-full h-full object-center" alt="photo">
+              <img src="{{asset('assets/photos/photo6.png')}}" class="object-cover w-full h-full object-center" alt="photo">
             </div>
           </div>
           <div class="flex flex-col gap-1 text-center">
@@ -355,7 +342,7 @@
           </div>
           <div class="flex items-center justify-center gap-[10px]">
             <div class="w-6 h-6 flex shrink-0">
-              <img src="assets/icons/global.svg" alt="icon">
+              <img src="{{asset('assets/icons/global.svg')}}" alt="icon">
             </div>
             <p class="text-cp-dark-blue font-semibold">Shanghai, China</p>
           </div>
@@ -363,7 +350,7 @@
         <div class="card bg-white flex flex-col h-full justify-center items-center p-[30px] px-[29px] gap-[30px] rounded-[20px] border border-white hover:shadow-[0_10px_30px_0_#D1D4DF80] hover:border-cp-dark-blue transition-all duration-300">
           <div class="w-[100px] h-[100px] flex shrink-0 items-center justify-center rounded-full bg-[linear-gradient(150.55deg,_#007AFF_8.72%,_#312ECB_87.11%)]">
             <div class="w-[90px] h-[90px] rounded-full overflow-hidden">
-              <img src="assets/photos/photo7.png" class="object-cover w-full h-full object-center" alt="photo">
+              <img src="{{asset('assets/photos/photo7.png')}}" class="object-cover w-full h-full object-center" alt="photo">
             </div>
           </div>
           <div class="flex flex-col gap-1 text-center">
@@ -372,7 +359,7 @@
           </div>
           <div class="flex items-center justify-center gap-[10px]">
             <div class="w-6 h-6 flex shrink-0">
-              <img src="assets/icons/global.svg" alt="icon">
+              <img src="{{asset('assets/icons/global.svg')}}" alt="icon">
             </div>
             <p class="text-cp-dark-blue font-semibold">Bali, Indonesia</p>
           </div>
@@ -380,7 +367,7 @@
         <a href="team.html" class="view-all-card">
           <div class="card bg-white flex flex-col h-full justify-center items-center p-[30px] gap-[30px] rounded-[20px] border border-white hover:shadow-[0_10px_30px_0_#D1D4DF80] hover:border-cp-dark-blue transition-all duration-300">
             <div class="w-[60px] h-[60px] flex shrink-0">
-              <img src="assets/icons/profile-2user.svg" alt="icon">
+              <img src="{{asset('assets/icons/profile-2user.svg')}}" alt="icon">
             </div>
             <div class="flex flex-col gap-1 text-center">
               <p class="font-bold text-xl leading-[30px]">View All</p>
@@ -401,18 +388,18 @@
         <div class="testimonial-container flex flex-col gap-[112px] w-[565px]">
           <div class="flex flex-col gap-[30px]">
             <div class="h-9 overflow-hidden">
-              <img src="assets/logo/logo-54.svg" class="object-contain" alt="icon">
+              <img src="{{asset('assets/logo/logo-54.svg')}}" class="object-contain" alt="icon">
             </div>
             <div class="relative pt-[27px] pl-[30px]">
               <div class="absolute top-0 left-0">
-                <img src="assets/icons/quote.svg" alt="icon">
+                <img src="{{asset('assets/icons/quote.svg')}}" alt="icon">
               </div>
               <p class="font-semibold text-2xl leading-[46px] relative z-10">Shayna is a leading construction company in Melbourne, building new homes and commercial projects that are durable, functional and beautiful.</p>
             </div>
             <div class="flex items-center justify-between pl-[30px]">
               <div class="flex items-center gap-6">
                 <div class="w-[60px] h-[60px] flex shrink-0 rounded-full overflow-hidden">
-                  <img src="assets/photos/photo3.png" class="w-full h-full object-cover" alt="photo">
+                  <img src="{{asset('assets/photos/photo3.png')}}" class="w-full h-full object-cover" alt="photo">
                 </div>
                 <div class="flex flex-col justify-center gap-1">
                   <p class="font-bold">Sirania</p>
@@ -421,19 +408,19 @@
               </div>
               <div class="flex flex-nowrap">
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
               </div>
             </div>
@@ -442,25 +429,25 @@
           </div>
         </div>
         <div class="testimonial-thumbnail w-[470px] h-[550px] rounded-[20px] overflow-hidden bg-[#D9D9D9]">
-          <img src="assets/backgrounds/banner.jpg" class="w-full h-full object-cover object-center" alt="thumbnail">
+          <img src="{{asset('assets/backgrounds/banner.jpg')}}" class="w-full h-full object-cover object-center" alt="thumbnail">
         </div>
       </div>
       <div class="carousel-card container max-w-[1130px] w-full flex flex-wrap justify-between items-center lg:mx-[calc((100vw-1130px)/2)]">
         <div class="testimonial-container flex flex-col gap-[112px] w-[565px]">
           <div class="flex flex-col gap-[30px]">
             <div class="h-9 overflow-hidden">
-              <img src="assets/logo/logo-51.svg" class="object-contain" alt="icon">
+              <img src="{{asset('assets/logo/logo-51.svg')}}" class="object-contain" alt="icon">
             </div>
             <div class="relative pt-[27px] pl-[30px]">
               <div class="absolute top-0 left-0">
-                <img src="assets/icons/quote.svg" alt="icon">
+                <img src="{{asset('assets/icons/quote.svg')}}" alt="icon">
               </div>
               <p class="font-semibold text-2xl leading-[46px] relative z-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil distinctio quasi blanditiis dolorum iste velit. Quo alias non ab debitis!</p>
             </div>
             <div class="flex items-center justify-between pl-[30px]">
               <div class="flex items-center gap-6">
                 <div class="w-[60px] h-[60px] flex shrink-0 rounded-full overflow-hidden">
-                  <img src="assets/photos/photo2.png" class="w-full h-full object-cover" alt="photo">
+                  <img src="{{asset('assets/photos/photo2.png')}}" class="w-full h-full object-cover" alt="photo">
                 </div>
                 <div class="flex flex-col justify-center gap-1">
                   <p class="font-bold">Bruno Oleo</p>
@@ -469,19 +456,19 @@
               </div>
               <div class="flex flex-nowrap">
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
               </div>
             </div>
@@ -490,25 +477,25 @@
           </div>
         </div>
         <div class="testimonial-thumbnail w-[470px] h-[550px] rounded-[20px] overflow-hidden bg-[#D9D9D9]">
-          <img src="assets/thumbnails/cover1.jpg" class="w-full h-full object-cover object-center" alt="thumbnail">
+          <img src="{{asset('assets/thumbnails/cover1.jpg')}}" class="w-full h-full object-cover object-center" alt="thumbnail">
         </div>
       </div>
       <div class="carousel-card container max-w-[1130px] w-full flex flex-wrap justify-between items-center lg:mx-[calc((100vw-1130px)/2)]">
         <div class="testimonial-container flex flex-col gap-[112px] w-[565px]">
           <div class="flex flex-col gap-[30px]">
             <div class="h-9 overflow-hidden">
-              <img src="assets/logo/logo-54.svg" class="object-contain" alt="icon">
+              <img src="{{asset('assets/logo/logo-54.svg')}}" class="object-contain" alt="icon">
             </div>
             <div class="relative pt-[27px] pl-[30px]">
               <div class="absolute top-0 left-0">
-                <img src="assets/icons/quote.svg" alt="icon">
+                <img src="{{asset('assets/icons/quote.svg')}}" alt="icon">
               </div>
               <p class="font-semibold text-2xl leading-[46px] relative z-10">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio officia, reprehenderit magni obcaecati praesentium quasi iusto rerum.</p>
             </div>
             <div class="flex items-center justify-between pl-[30px]">
               <div class="flex items-center gap-6">
                 <div class="w-[60px] h-[60px] flex shrink-0 rounded-full overflow-hidden">
-                  <img src="assets/photos/photo4.png" class="w-full h-full object-cover" alt="photo">
+                  <img src="{{asset('assets/photos/photo4.png')}}" class="w-full h-full object-cover" alt="photo">
                 </div>
                 <div class="flex flex-col justify-center gap-1">
                   <p class="font-bold">Sami Kimi</p>
@@ -517,19 +504,19 @@
               </div>
               <div class="flex flex-nowrap">
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
               </div>
             </div>
@@ -538,25 +525,25 @@
           </div>
         </div>
         <div class="testimonial-thumbnail w-[470px] h-[550px] rounded-[20px] overflow-hidden bg-[#D9D9D9]">
-          <img src="assets/thumbnails/cover2.jpg" class="w-full h-full object-cover object-center" alt="thumbnail">
+          <img src="{{asset('assets/thumbnails/cover2.jpg')}}" class="w-full h-full object-cover object-center" alt="thumbnail">
         </div>
       </div>
       <div class="carousel-card container max-w-[1130px] w-full flex flex-wrap justify-between items-center lg:mx-[calc((100vw-1130px)/2)]">
         <div class="testimonial-container flex flex-col gap-[112px] w-[565px]">
           <div class="flex flex-col gap-[30px]">
             <div class="h-9 overflow-hidden">
-              <img src="assets/logo/logo-44.svg" class="object-contain" alt="icon">
+              <img src="{{asset('assets/logo/logo-44.svg')}}" class="object-contain" alt="icon">
             </div>
             <div class="relative pt-[27px] pl-[30px]">
               <div class="absolute top-0 left-0">
-                <img src="assets/icons/quote.svg" alt="icon">
+                <img src="{{asset('assets/icons/quote.svg')}}" alt="icon">
               </div>
               <p class="font-semibold text-2xl leading-[46px] relative z-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, rem!</p>
             </div>
             <div class="flex items-center justify-between pl-[30px]">
               <div class="flex items-center gap-6">
                 <div class="w-[60px] h-[60px] flex shrink-0 rounded-full overflow-hidden">
-                  <img src="assets/photos/photo7.png" class="w-full h-full object-cover" alt="photo">
+                  <img src="{{asset('assets/photos/photo7.png')}}" class="w-full h-full object-cover" alt="photo">
                 </div>
                 <div class="flex flex-col justify-center gap-1">
                   <p class="font-bold">Yuyan Chin</p>
@@ -565,19 +552,19 @@
               </div>
               <div class="flex flex-nowrap">
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
               </div>
             </div>
@@ -586,25 +573,25 @@
           </div>
         </div>
         <div class="testimonial-thumbnail w-[470px] h-[550px] rounded-[20px] overflow-hidden bg-[#D9D9D9]">
-          <img src="assets/backgrounds/banner.jpg" class="w-full h-full object-cover object-center" alt="thumbnail">
+          <img src="{{asset('assets/backgrounds/banner.jpg')}}" class="w-full h-full object-cover object-center" alt="thumbnail">
         </div>
       </div>
       <div class="carousel-card container max-w-[1130px] w-full flex flex-wrap justify-between items-center lg:mx-[calc((100vw-1130px)/2)]">
         <div class="testimonial-container flex flex-col gap-[112px] w-[565px]">
           <div class="flex flex-col gap-[30px]">
             <div class="h-9 overflow-hidden">
-              <img src="assets/logo/logo-54.svg" class="object-contain" alt="icon">
+              <img src="{{asset('assets/logo/logo-54.svg')}}" class="object-contain" alt="icon">
             </div>
             <div class="relative pt-[27px] pl-[30px]">
               <div class="absolute top-0 left-0">
-                <img src="assets/icons/quote.svg" alt="icon">
+                <img src="{{asset('assets/icons/quote.svg')}}" alt="icon">
               </div>
               <p class="font-semibold text-2xl leading-[46px] relative z-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis quia adipisci voluptatum deleniti rerum, explicabo aperiam illum porro voluptatibus qui expedita sapiente sed sequi animi!</p>
             </div>
             <div class="flex items-center justify-between pl-[30px]">
               <div class="flex items-center gap-6">
                 <div class="w-[60px] h-[60px] flex shrink-0 rounded-full overflow-hidden">
-                  <img src="assets/photos/photo6.png" class="w-full h-full object-cover" alt="photo">
+                  <img src="{{asset('assets/photos/photo6.png')}}" class="w-full h-full object-cover" alt="photo">
                 </div>
                 <div class="flex flex-col justify-center gap-1">
                   <p class="font-bold">Putri Emily</p>
@@ -613,19 +600,19 @@
               </div>
               <div class="flex flex-nowrap">
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
                 <div class="w-6 h-6 flex shrink-0">
-                  <img src="assets/icons/Star-rating.svg" alt="star">
+                  <img src="{{asset('assets/icons/Star-rating.svg')}}" alt="star">
                 </div>
               </div>
             </div>
@@ -634,7 +621,7 @@
           </div>
         </div>
         <div class="testimonial-thumbnail w-[470px] h-[550px] rounded-[20px] overflow-hidden bg-[#D9D9D9]">
-          <img src="assets/thumbnails/cover3.jpg" class="w-full h-full object-cover object-center" alt="thumbnail">
+          <img src="{{asset('assets/thumbnails/cover3.jpg')}}" class="w-full h-full object-cover object-center" alt="thumbnail">
         </div>
       </div>
     </div>
@@ -650,7 +637,7 @@
     <div class="awards-card-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px] justify-center">
       <div class="card bg-white flex flex-col h-full p-[30px] gap-[30px] rounded-[20px] border border-[#E8EAF2] hover:border-cp-dark-blue transition-all duration-300">
         <div class="w-[55px] h-[55px] flex shrink-0">
-          <img src="assets/icons/cup-blue.svg" alt="icon">
+          <img src="{{asset('assets/icons/cup-blue.svg')}}" alt="icon">
         </div>
         <hr class="border-[#E8EAF2]">
         <p class="font-bold text-xl leading-[30px]">Solid Fundamental Crafter Async</p>
@@ -659,7 +646,7 @@
       </div>
       <div class="card bg-white flex flex-col h-full p-[30px] gap-[30px] rounded-[20px] border border-[#E8EAF2] hover:border-cp-dark-blue transition-all duration-300">
         <div class="w-[55px] h-[55px] flex shrink-0">
-          <img src="assets/icons/cup-blue.svg" alt="icon">
+          <img src="{{asset('assets/icons/cup-blue.svg')}}" alt="icon">
         </div>
         <hr class="border-[#E8EAF2]">
         <p class="font-bold text-xl leading-[30px]">Most Crowded Yet Harmony Place</p>
@@ -668,7 +655,7 @@
       </div>
       <div class="card bg-white flex flex-col h-full p-[30px] gap-[30px] rounded-[20px] border border-[#E8EAF2] hover:border-cp-dark-blue transition-all duration-300">
         <div class="w-[55px] h-[55px] flex shrink-0">
-          <img src="assets/icons/cup-blue.svg" alt="icon">
+          <img src="{{asset('assets/icons/cup-blue.svg')}}" alt="icon">
         </div>
         <hr class="border-[#E8EAF2]">
         <p class="font-bold text-xl leading-[30px]">Small Things Made Much Big Impacts</p>
@@ -677,7 +664,7 @@
       </div>
       <div class="card bg-white flex flex-col h-full p-[30px] gap-[30px] rounded-[20px] border border-[#E8EAF2] hover:border-cp-dark-blue transition-all duration-300">
         <div class="w-[55px] h-[55px] flex shrink-0">
-          <img src="assets/icons/cup-blue.svg" alt="icon">
+          <img src="{{asset('assets/icons/cup-blue.svg')}}" alt="icon">
         </div>
         <hr class="border-[#E8EAF2]">
         <p class="font-bold text-xl leading-[30px]">Teamwork and Solidarity</p>
@@ -700,7 +687,7 @@
                   <button class="accordion-button flex justify-between gap-1 items-center" data-accordion="accordion-faq-1">
                       <span class="font-bold text-lg leading-[27px] text-left">Can installments be beneficial for both?</span>
                       <div class="arrow w-9 h-9 flex shrink-0">
-                          <img src="assets/icons/arrow-circle-down.svg" class="transition-all duration-300" alt="icon">
+                          <img src="{{asset('assets/icons/arrow-circle-down.svg')}}" class="transition-all duration-300" alt="icon">
                       </div>
                   </button>
                   <div id="accordion-faq-1" class="accordion-content hide">
@@ -711,7 +698,7 @@
                   <button class="accordion-button flex justify-between gap-1 items-center" data-accordion="accordion-faq-2">
                       <span class="font-bold text-lg leading-[27px] text-left">What kind of framework you popular with?</span>
                       <div class="arrow w-9 h-9 flex shrink-0">
-                          <img src="assets/icons/arrow-circle-down.svg" class="transition-all duration-300" alt="icon">
+                          <img src="{{asset('assets/icons/arrow-circle-down.svg')}}" class="transition-all duration-300" alt="icon">
                       </div>
                   </button>
                   <div id="accordion-faq-2" class="accordion-content hide">
@@ -722,7 +709,7 @@
                   <button class="accordion-button flex justify-between gap-1 items-center" data-accordion="accordion-faq-3">
                       <span class="font-bold text-lg leading-[27px] text-left">What insurance provider do you use?</span>
                       <div class="arrow w-9 h-9 flex shrink-0">
-                          <img src="assets/icons/arrow-circle-down.svg" class="transition-all duration-300" alt="icon">
+                          <img src="{{asset('assets/icons/arrow-circle-down.svg')}}" class="transition-all duration-300" alt="icon">
                       </div>
                   </button>
                   <div id="accordion-faq-3" class="accordion-content hide">
@@ -733,7 +720,7 @@
                   <button class="accordion-button flex justify-between gap-1 items-center" data-accordion="accordion-faq-4">
                       <span class="font-bold text-lg leading-[27px] text-left">What if we have other questions?</span>
                       <div class="arrow w-9 h-9 flex shrink-0">
-                          <img src="assets/icons/arrow-circle-down.svg" class="transition-all duration-300" alt="icon">
+                          <img src="{{asset('assets/icons/arrow-circle-down.svg')}}" class="transition-all duration-300" alt="icon">
                       </div>
                   </button>
                   <div id="accordion-faq-4" class="accordion-content hide">
@@ -749,7 +736,7 @@
       <div class="flex flex-col gap-10">
         <div class="flex items-center gap-3">
           <div class="flex shrink-0 h-[43px] overflow-hidden">
-              <img src="assets/logo/logo.svg" class="object-contain w-full h-full" alt="logo">
+              <img src="{{asset('assets/logo/logo.svg')}}" class="object-contain w-full h-full" alt="logo">
           </div>
           <div class="flex flex-col">
             <p id="CompanyName" class="font-extrabold text-xl leading-[30px] text-white">ShaynaComp</p>
@@ -759,22 +746,22 @@
         <div class="flex items-center gap-4">
           <a href="">
             <div class="w-6 h-6 flex shrink-0 overflow-hidden">
-              <img src="assets/icons/youtube.svg" class="w-full h-full object-contain" alt="youtube">
+              <img src="{{asset('assets/icons/youtube.svg')}}" class="w-full h-full object-contain" alt="youtube">
             </div>
           </a>
           <a href="">
             <div class="w-6 h-6 flex shrink-0 overflow-hidden">
-              <img src="assets/icons/whatsapp.svg" class="w-full h-full object-contain" alt="whatsapp">
+              <img src="{{asset('assets/icons/whatsapp.svg')}}" class="w-full h-full object-contain" alt="whatsapp">
             </div>
           </a>
           <a href="">
             <div class="w-6 h-6 flex shrink-0 overflow-hidden">
-              <img src="assets/icons/facebook.svg" class="w-full h-full object-contain" alt="facebook">
+              <img src="{{asset('assets/icons/facebook.svg')}}" class="w-full h-full object-contain" alt="facebook">
             </div>
           </a>
           <a href="">
             <div class="w-6 h-6 flex shrink-0 overflow-hidden">
-              <img src="assets/icons/instagram.svg" class="w-full h-full object-contain" alt="instagram">
+              <img src="{{asset('assets/icons/instagram.svg')}}" class="w-full h-full object-contain" alt="instagram">
             </div>
           </a>
         </div>
@@ -832,6 +819,9 @@
       </div>
   </div>
 
+@endsection
+
+@push('after-scripts')
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
   <!-- JavaScript -->
@@ -841,5 +831,4 @@
   <script src="{{asset('js/accordion.js')}}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   <script src="{{asset('js/modal-video.js')}}"></script>
-</body>
-</html>
+@endpush
