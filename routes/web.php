@@ -15,6 +15,7 @@ use App\Models\HeroSection;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontController::class, 'index'])->name('front.index');
+Route::get('/team', [FrontController::class, 'team'])->name('front.team');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
