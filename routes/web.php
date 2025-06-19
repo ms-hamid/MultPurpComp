@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontController::class, 'index'])->name('front.index');
 Route::get('/team', [FrontController::class, 'team'])->name('front.team');
+Route::get('/about', [FrontController::class, 'about'])->name('front.about');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
