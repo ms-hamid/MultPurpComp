@@ -40,14 +40,16 @@
                     <h3 class="text-indigo-950 text-lg font-bold mt-4">Keypoints</h3>
 
                     <div class="mt-2">
-                        @foreach ($about->keypoints as $keypoint)
                             <div class="flex flex-col gap-y-1 mb-4">
+                            @forelse ($about->keypoints as $keypoint)
                                 <x-input-label for="keypoints" :value="__('keypoints')" /> 
                                 <input type="text" class="py-3 rounded-lg border-slate-300 border" 
-                                    value="{{ $keypoint['keypoint'] }}" 
+                                    value="{{ $keypoint->keypoint }}" 
                                     name="keypoints[]">
+                            @empty
+                                <p class="text-cp-light-grey">No key points available.</p>
+                            @endforelse
                             </div>
-                        @endforeach
                         <x-input-error :messages="$errors->get('keypoints')" class="mt-2" />
                     </div>
 
